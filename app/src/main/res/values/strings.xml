@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">C0772144_W2020_MAD3125_MidTerm</string>
+    <string name="your_tax_summary">YOUR TAX SUMMARY</string>
+    <string name="full_name">FULL NAME</string>
+    <string name="birth_date">BIRTH DATE</string>
+    <string name="gender">GENDER</string>
+    <string name="age">AGE</string>
+    <string name="gross_income">GROSS INCOME</string>
+    <string name="sin_number">SIN NUMBER</string>
+    <string name="federal_tax">FEDERAL TAX</string>
+    <string name="cpp">CPP</string>
+    <string name="carry_forward_rrsp">CARRY FORWARD RRSP</string>
+    <string name="rrsp">RRSP</string>
+    <string name="total_taxable_income">TOTAL TAXABLE INCOME</string>
+    <string name="total_tax_paid">TOTAL TAX PAID</string>
+
 </resources>
