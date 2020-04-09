@@ -60,7 +60,7 @@ public class EntryFormActivity extends AppCompatActivity {
         setContentView(R.layout.activity_entry_form);
 
         init();
-        addingDatePicker();
+        datePicker();
 
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
@@ -76,8 +76,12 @@ public class EntryFormActivity extends AppCompatActivity {
                 clear();
             }
         });
+        LocalDate date = LocalDate.now();
+        DateTimeFormatter fmt = DateTimeFormat.forPattern("dd-MMM-yyyy");
+        edtFilingDateText.setText(date.toString(fmt));
+    }
 
-     
+
 
 
 }
