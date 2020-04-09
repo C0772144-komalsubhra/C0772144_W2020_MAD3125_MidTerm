@@ -11,8 +11,31 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Activities.EntryFormActivity">
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="63dp"
+            android:layout_marginEnd="102dp"
+            android:layout_marginBottom="725dp"
+            android:text="ENTRY FORM"
+            android:textColor="@color/colorPrimary"
+            android:textColorHighlight="#00FFFFFF"
+            android:textColorHint="#00FFFFFF"
+            android:textColorLink="#00FFFFFF"
 
-    <com.google.android.material.textfield.TextInputLayout
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.751"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="RtlCompat" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edtFirstName"
         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
         android:layout_width="0dp"
@@ -125,28 +148,6 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="63dp"
-        android:layout_marginEnd="102dp"
-        android:layout_marginBottom="725dp"
-        android:text="ENTRY FORM"
-        android:textColor="@color/colorPrimary"
-        android:textColorHighlight="#00FFFFFF"
-        android:textColorHint="#00FFFFFF"
-        android:textColorLink="#00FFFFFF"
-
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.751"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="RtlCompat" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edtDate"
