@@ -30,8 +30,20 @@ public class CRACustomer implements Parcelable {
             rrspContributed = in.readFloat();
         }
     }
+    public static final Creator<CRACustomer> CREATOR = new Creator<CRACustomer>() {
+        @Override
+        public CRACustomer createFromParcel(Parcel in) {
+            return new CRACustomer(in);
+        }
 
-    
+        @Override
+        public CRACustomer[] newArray(int size) {
+            return new CRACustomer[size];
+        }
+    };
+
+  
+
 
 
 }
