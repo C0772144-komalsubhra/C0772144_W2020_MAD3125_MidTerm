@@ -42,7 +42,19 @@ public class CRACustomer implements Parcelable {
         }
     };
 
-  
+    public CRACustomer(String SIN, String firstName, String lastName, Gender gender, org.joda.time.LocalDate stringToDate, float grossIncome, float rrspContributed) {
+        this.SIN = SIN;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.birthDate = birthDate;
+        this.grossIncome = grossIncome;
+        this.rrspContributed = rrspContributed;
+    }
+
+
+   
+
 
 
 
