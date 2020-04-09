@@ -15,7 +15,23 @@ public class CRACustomer implements Parcelable {
     private LocalDate birthDate;
     private Float grossIncome;
     private Float rrspContributed;
+    public CRACustomer(Parcel in) {
+        SIN = in.readString();
+        firstName = in.readString();
+        lastName = in.readString();
+        if (in.readByte() == 0) {
+            grossIncome = null;
+        } else {
+            grossIncome = in.readFloat();
+        }
+        if (in.readByte() == 0) {
+            rrspContributed = null;
+        } else {
+            rrspContributed = in.readFloat();
+        }
+    }
 
-  
+    
+
 
 }
