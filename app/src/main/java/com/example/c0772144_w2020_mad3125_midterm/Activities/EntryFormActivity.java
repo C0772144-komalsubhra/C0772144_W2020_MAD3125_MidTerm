@@ -80,7 +80,12 @@ public class EntryFormActivity extends AppCompatActivity {
         DateTimeFormatter fmt = DateTimeFormat.forPattern("dd-MMM-yyyy");
         edtFilingDateText.setText(date.toString(fmt));
     }
-
+    protected void onStart()
+    {
+        super.onStart();
+        clear();
+    }
+   
 
 
 
