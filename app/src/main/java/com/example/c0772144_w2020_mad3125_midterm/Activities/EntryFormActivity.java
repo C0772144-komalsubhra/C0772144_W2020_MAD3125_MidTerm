@@ -85,7 +85,23 @@ public class EntryFormActivity extends AppCompatActivity {
         super.onStart();
         clear();
     }
-   
+    public void clear()
+    {
+        edtSINText.getText().clear();
+        edtFirstNameText.getText().clear();
+        edtLastNameText.getText().clear();
+        edtDateText.getText().clear();
+        edtGrossIncomeText.getText().clear();
+        edtRRSPText.getText().clear();
+
+        rdBtnOther.setChecked(false);
+        rdBtnMale.setChecked(false);
+        rdBtnFemale.setChecked(false);
+    }
+
+  
+
+
 
 
 
