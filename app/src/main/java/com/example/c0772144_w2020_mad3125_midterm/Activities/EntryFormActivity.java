@@ -51,10 +51,33 @@ public class EntryFormActivity extends AppCompatActivity {
     private Button btnSubmit;
     private Button btnClear;
 
-    String sinNumber;
-    Long sinNumberNums;
 
- 
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_entry_form);
+
+        init();
+        addingDatePicker();
+
+
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fieldchecker();
+            }
+        });
+
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clear();
+            }
+        });
+
+     
 
 
 }
