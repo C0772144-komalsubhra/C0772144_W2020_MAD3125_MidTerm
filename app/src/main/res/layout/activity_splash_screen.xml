@@ -15,7 +15,35 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="vertical">
-      
+        <TextView
+            style="@style/TextAppearance.AppCompat.Display1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/josefinslab_bold"
+            android:text="CANADA TAX CALCULATOR"
+            android:textColor="@android:color/primary_text_dark"
+            android:textStyle="bold" />
+        <TextView
+            style="@style/TextAppearance.AppCompat.Display1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="KOMAL SUBHRA"
+            android:fontFamily="@font/josefinslab_bold"
+            android:textColor="@android:color/primary_text_dark"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:fontFamily="@font/josefinslab_bold"
+            android:text="C0772144"
+            android:textColor="@android:color/secondary_text_dark" />
+
     </LinearLayout>
 
 
