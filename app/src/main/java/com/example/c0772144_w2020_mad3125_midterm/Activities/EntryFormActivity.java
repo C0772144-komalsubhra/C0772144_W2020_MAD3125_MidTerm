@@ -30,6 +30,31 @@ import org.joda.time.format.DateTimeFormatter;
 import java.util.Calendar;
 
 public class EntryFormActivity extends AppCompatActivity {
-   
+    private DatePickerDialog.OnDateSetListener dateSetListener;
+    private TextInputEditText edtSINText;
+    private TextInputLayout edtSIN;
+    private TextInputLayout edtFirstName;
+    private TextInputEditText edtFirstNameText;
+    private TextInputLayout edtLastName;
+    private TextInputEditText edtLastNameText;
+    private TextInputEditText edtDateText;
+    private TextInputLayout edtDate;
+    private TextInputEditText edtFilingDateText;
+    private TextInputLayout edtGrossIncome;
+    private TextInputEditText edtGrossIncomeText;
+    private TextInputLayout edtRRSP;
+    private TextInputEditText edtRRSPText;
+    private RadioButton rdBtnMale;
+    private RadioButton rdBtnFemale;
+    private RadioButton rdBtnOther;
+
+    private Button btnSubmit;
+    private Button btnClear;
+
+    String sinNumber;
+    Long sinNumberNums;
+
+ 
+
 
 }
