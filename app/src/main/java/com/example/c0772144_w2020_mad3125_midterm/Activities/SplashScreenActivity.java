@@ -13,5 +13,11 @@ import com.example.c0772144_w2020_mad3125_midterm.R;
 
 
 public class SplashScreenActivity extends AppCompatActivity {
-  
+    private static final int SPLASH_TIME = 5000;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+
 }
