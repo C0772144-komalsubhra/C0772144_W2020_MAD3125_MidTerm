@@ -168,9 +168,43 @@ public class EntryFormActivity extends AppCompatActivity {
             startActivity(mIntent);
         }
     }
+    private void datePicker()
+    {
+        edtDateText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Calendar cal = Calendar.getInstance();
+                int year = cal.get(Calendar.YEAR);
+                int month = cal.get(Calendar.MONTH);
+                int day = cal.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog dialog = new DatePickerDialog(
+                        EntryFormActivity.this,
+                        android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+                        dateSetListener,
+                        year, month, day);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+            }
+        });
+
+        dateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker datePicker, int year, int month, int day)
+            {
+                String date;
+                month = month + 1;
+                String monthName = getMonthName(month);
+                date = day + "-" + monthName + "-" + year;
+                edtDateText.setText(date);
+            }
+        };
+    }
+
+  
 
 
-    
+
 
 
 
