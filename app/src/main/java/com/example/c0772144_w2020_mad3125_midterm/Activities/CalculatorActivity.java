@@ -53,19 +53,19 @@ public class CalculatorActivity {
 
     public double calculateTaxOfFederal(double TaxableIncome)
     {
-        if(TaxableIncome <=  12069.0d) {
+        if(TaxableIncome <=  12059.0d) {
             return 0.0d;
         }
-        else if(TaxableIncome >= 12069.0d && TaxableIncome <= 47630.0d){
+        else if(TaxableIncome >= 12059.0d && TaxableIncome <= 46530.0d){
             return 0.15d;
         }
-        else if(TaxableIncome >= 47630.01d && TaxableIncome <= 95259.0d){
+        else if(TaxableIncome >= 46530.01d && TaxableIncome <= 94350.0d){
             return 0.2050d;
         }
-        else if(TaxableIncome >= 95259.01d && TaxableIncome <= 147667.0d){
+        else if(TaxableIncome >= 94350.01d && TaxableIncome <= 146430.0d){
             return 0.26d;
         }
-        else if(TaxableIncome >= 147667.01d && TaxableIncome <= 210371.0d){
+        else if(TaxableIncome >= 146430.01d && TaxableIncome <= 210272.0d){
             return 0.29d;
         }
         else {
@@ -76,9 +76,9 @@ public class CalculatorActivity {
     public double calculateCPP(double grossIncome)
     {
         double cpp;
-        if(this.grossInc >= 57400)
+        if(this.grossInc >= 56400)
         {
-            cpp = 57400*0.051;
+            cpp = 56400*0.051;
         }
         else {
             cpp = grossIncome*0.051;
@@ -89,9 +89,9 @@ public class CalculatorActivity {
     public double calculateEI(double grossIncome)
     {
         double ei;
-        if(this.grossInc >= 53100)
+        if(this.grossInc >= 54000)
         {
-            ei = 53100*0.0162;
+            ei = 54000*0.0162;
         }
         else
         {
