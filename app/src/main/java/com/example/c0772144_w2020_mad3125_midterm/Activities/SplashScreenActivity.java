@@ -10,6 +10,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.c0772144_w2020_mad3125_midterm.R;
+import com.example.c0772144_w2020_mad3125_midterm.Util.BackgroundTask;
 
 
 public class SplashScreenActivity extends AppCompatActivity {
@@ -32,6 +33,7 @@ public class SplashScreenActivity extends AppCompatActivity {
     }
 
 
-   
+
+
 
 }
