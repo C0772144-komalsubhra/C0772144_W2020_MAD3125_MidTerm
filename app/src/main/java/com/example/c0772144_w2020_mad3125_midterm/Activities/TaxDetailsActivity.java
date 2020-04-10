@@ -16,5 +16,19 @@ import org.joda.time.LocalDate;
 
 
 public class TaxDetailsActivity extends AppCompatActivity {
+    TextView txtRRSP;
+    TextView txtSin;
+    TextView txtName;
+    TextView txtBirthDate;
+    TextView txtGender;
+    TextView txtAge;
+    TextView txtGrossIncome;
+    TextView txtFederalTax;
+    TextView txtProvincialTax;
+    TextView txtCPP;
+    TextView txtEI;
+    TextView txtCarry;
+    TextView txtTotalIncome;
+    TextView txtTotalTax;
    
 }
