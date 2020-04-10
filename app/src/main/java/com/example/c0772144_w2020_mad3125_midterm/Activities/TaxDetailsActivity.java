@@ -30,5 +30,17 @@ public class TaxDetailsActivity extends AppCompatActivity {
     TextView txtCarry;
     TextView txtTotalIncome;
     TextView txtTotalTax;
-   
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_tax_details);
+        init();
+
+        Intent intent = getIntent();
+        CRACustomer craCustomer = intent.getParcelableExtra("CRACustomer");
+        String firstName = craCustomer.getFirstName();
+        String formattedFirstName = firstName.substring(0,1).toUpperCase() + firstName.substring(1);
+        String lastName = craCustomer.getLastName().toUpperCase();
+        String fullName = lastName + ", " +formattedFirstName;
+
 }
