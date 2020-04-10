@@ -38,7 +38,7 @@ public class CalculatorActivity {
         {
             return 0.0915d;
         }
-        else if (TaxableIncome >= 87813.0d && TaxableIncome <= 150000.0d) {
+        else if (TaxableIncome >= 87045.0d && TaxableIncome <= 150000.0d) {
             return 0.1116d;
         }
         else if (TaxableIncome >= 150000.0d && TaxableIncome <= 220000.0d)
