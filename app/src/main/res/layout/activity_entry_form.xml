@@ -296,17 +296,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:startIconDrawable="@drawable/dollaricondollaricon">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtRRSPtext"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/edittextstyle"
-            android:cursorVisible="true"
-            android:fontFamily="@font/josefinslab_bold"
-            android:hint="RRSP CONTRIBUTED"
-            android:textColor="#050000"
-            android:textColorHint="#050000"
-            android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
         <Button
