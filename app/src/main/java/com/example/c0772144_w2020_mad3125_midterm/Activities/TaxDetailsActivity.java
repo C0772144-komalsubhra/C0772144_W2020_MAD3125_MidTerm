@@ -34,7 +34,24 @@ public class TaxDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tax_details);
-        init();
+
+        txtName = findViewById(R.id.name);
+        txtSin = findViewById(R.id.sinNumber);
+
+        txtBirthDate = findViewById(R.id.birthDate);
+        txtGender = findViewById(R.id.gender);
+        txtAge = findViewById(R.id.age);
+
+        txtGrossIncome = findViewById(R.id.grossIncome);
+        txtFederalTax = findViewById(R.id.federalTax);
+        txtProvincialTax = findViewById(R.id.provincialTax);
+        txtCPP = findViewById(R.id.cPP);
+        txtCarry = findViewById(R.id.carryForward);
+        txtRRSP = findViewById(R.id.rRSP);
+        txtEI = findViewById(R.id.eI);
+
+        txtTotalIncome = findViewById(R.id.totalTaxIncome);
+        txtTotalTax = findViewById(R.id.txtPaid);
 
         Intent intent = getIntent();
         CRACustomer craCustomer = intent.getParcelableExtra("CRACustomer");
@@ -97,28 +114,5 @@ public class TaxDetailsActivity extends AppCompatActivity {
         age = LocalDate.now().getYear() - MethodsActivity.getInstance().stringToDate(bDate).getYear();
         return age;
     }
-
-    public void init()
-    {
-        txtName = findViewById(R.id.name);
-        txtSin = findViewById(R.id.sinNumber);
-
-        txtBirthDate = findViewById(R.id.birthDate);
-        txtGender = findViewById(R.id.gender);
-        txtAge = findViewById(R.id.age);
-
-        txtGrossIncome = findViewById(R.id.grossIncome);
-        txtFederalTax = findViewById(R.id.federalTax);
-        txtProvincialTax = findViewById(R.id.provincialTax);
-        txtCPP = findViewById(R.id.cPP);
-        txtCarry = findViewById(R.id.carryForward);
-        txtRRSP = findViewById(R.id.rRSP);
-        txtEI = findViewById(R.id.eI);
-
-        txtTotalIncome = findViewById(R.id.totalTaxIncome);
-        txtTotalTax = findViewById(R.id.txtPaid);
-    }
-
-
-
+    
 }
