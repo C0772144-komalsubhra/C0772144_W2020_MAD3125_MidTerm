@@ -114,5 +114,5 @@ public class TaxDetailsActivity extends AppCompatActivity {
         age = LocalDate.now().getYear() - MethodsActivity.getInstance().stringToDate(bDate).getYear();
         return age;
     }
-    
+
 }
