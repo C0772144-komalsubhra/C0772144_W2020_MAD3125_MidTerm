@@ -120,9 +120,62 @@ public class EntryFormActivity extends AppCompatActivity {
         rdBtnOther = findViewById(R.id.rdBtnOther);
     }
 
+    public void fieldchecker()
+    {
+        boolean error = false;
+        if(edtSINText.getText().toString().isEmpty())
+        {
+            edtSIN.setError("Please enter your SIN Number");
+            error = true;
+            return;
+        }
+        if(edtFirstNameText.getText().toString().isEmpty()){
+            edtFirstName.setError("Please enter your first name");
+            error = true;
+            return;
+        }
+        if(edtLastNameText.getText().toString().isEmpty())
+        {
+            edtLastName.setError("Please enter your last name");
+            error = true;
+            return;
+        }
+        if(edtDateText.getText().toString().isEmpty())
+        {
+            edtDate.setError("Please enter your birth date");
+            error = true;
+            return;
+        }
+        if(edtGrossIncomeText.getText().toString().isEmpty())
+        {
+            edtGrossIncome.setError("Please enter your gross income");
+            error = true;
+            return;
+        }
+        if(edtRRSPText.getText().toString().isEmpty())
+        {
+            edtRRSP.setError("Please enter your rrsp ammount");
+            error = true;
+            return;
+        }
+
+        if(!error)
+        {
+            CRACustomer craCustomer = new CRACustomer(edtSINText.getText().toString(), edtFirstNameText.getText().toString(), edtLastNameText.getText().toString(),
+                    getGender(), MethodsActivity.getInstance().stringToDate(edtDateText.getText().toString()), Float.parseFloat(edtGrossIncomeText.getText().toString()), Float.parseFloat(edtRRSPText.getText().toString()));
+            Intent mIntent = new Intent(EntryFormActivity.this, TaxDetailsActivity.class);
+            mIntent.putExtra("CRACustomer", craCustomer);
+            startActivity(mIntent);
+        }
+    }
 
 
     
+
+
+
+
+
 
 
 
