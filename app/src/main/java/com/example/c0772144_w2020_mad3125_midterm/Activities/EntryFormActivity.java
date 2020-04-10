@@ -201,7 +201,26 @@ public class EntryFormActivity extends AppCompatActivity {
         };
     }
 
-  
+    public static String getMonthName(int monthNumber){
+        String[] monthNames = {"Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"};
+        return monthNames[monthNumber-1];
+    }
+
+    public Gender getGender()
+    {
+        if (rdBtnMale.isChecked()){
+            return Gender.Male;
+        }
+        else if (rdBtnFemale.isChecked()) {
+            return Gender.Female;
+        }
+        else if(rdBtnOther.isChecked())
+        {
+            return Gender.Other;
+        }
+        return null;
+    }
+
 
 
 
