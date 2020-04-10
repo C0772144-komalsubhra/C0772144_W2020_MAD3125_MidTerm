@@ -55,8 +55,27 @@ public class EntryFormActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entry_form);
 
-        init();
         datePicker();
+
+        edtDateText = findViewById(R.id.edtDateText);
+        edtDate = findViewById(R.id.edtDate);
+        edtFilingDateText = findViewById(R.id.edtFilingDateText);
+        edtSIN = findViewById(R.id.edtSIN);
+        edtSINText = findViewById(R.id.edtSINText);
+        btnClear = findViewById(R.id.btnClear);
+        btnSubmit = findViewById(R.id.btnSubmit);
+        edtFirstName = findViewById(R.id.edtFirstName);
+        edtFirstNameText = findViewById(R.id.edtFirstNameText);
+        edtLastName = findViewById(R.id.edtLastName);
+        edtLastNameText = findViewById(R.id.edtLastNameText);
+        edtRRSP = findViewById(R.id.edtRRSP);
+        edtRRSPText = findViewById(R.id.edtRRSPtext);
+        edtGrossIncome = findViewById(R.id.edtGrossIncome);
+        edtGrossIncomeText = findViewById(R.id.edtGrossIncomeText);
+        rdBtnFemale = findViewById(R.id.rdBtnFemale);
+        rdBtnMale = findViewById(R.id.rdBtnMale);
+        rdBtnOther = findViewById(R.id.rdBtnOther);
+
 
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
@@ -94,27 +113,7 @@ public class EntryFormActivity extends AppCompatActivity {
         rdBtnMale.setChecked(false);
         rdBtnFemale.setChecked(false);
     }
-    private void init()
-    {
-        edtDateText = findViewById(R.id.edtDateText);
-        edtDate = findViewById(R.id.edtDate);
-        edtFilingDateText = findViewById(R.id.edtFilingDateText);
-        edtSIN = findViewById(R.id.edtSIN);
-        edtSINText = findViewById(R.id.edtSINText);
-        btnClear = findViewById(R.id.btnClear);
-        btnSubmit = findViewById(R.id.btnSubmit);
-        edtFirstName = findViewById(R.id.edtFirstName);
-        edtFirstNameText = findViewById(R.id.edtFirstNameText);
-        edtLastName = findViewById(R.id.edtLastName);
-        edtLastNameText = findViewById(R.id.edtLastNameText);
-        edtRRSP = findViewById(R.id.edtRRSP);
-        edtRRSPText = findViewById(R.id.edtRRSPtext);
-        edtGrossIncome = findViewById(R.id.edtGrossIncome);
-        edtGrossIncomeText = findViewById(R.id.edtGrossIncomeText);
-        rdBtnFemale = findViewById(R.id.rdBtnFemale);
-        rdBtnMale = findViewById(R.id.rdBtnMale);
-        rdBtnOther = findViewById(R.id.rdBtnOther);
-    }
+
 
     public void fieldchecker()
     {
