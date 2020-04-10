@@ -53,12 +53,11 @@ public class SplashScreenActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Object o) {
-            super.onPostExecute(o);
-
+        protected void onPostExecute(Object object) {
+            super.onPostExecute(object);
             startActivity(intent);
             finish();
         }
     }
-    }
+}
 
