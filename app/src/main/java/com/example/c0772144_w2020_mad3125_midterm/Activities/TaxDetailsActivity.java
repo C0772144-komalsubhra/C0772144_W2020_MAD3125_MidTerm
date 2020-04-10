@@ -90,6 +90,15 @@ public class TaxDetailsActivity extends AppCompatActivity {
         }
     }
 
-    
+    public int getAge()
+    {
+        int age = 0;
+        String bDate = txtBirthDate.getText().toString();
+        age = LocalDate.now().getYear() - MethodsActivity.getInstance().stringToDate(bDate).getYear();
+        return age;
+    }
+
+  
+
 
 }
