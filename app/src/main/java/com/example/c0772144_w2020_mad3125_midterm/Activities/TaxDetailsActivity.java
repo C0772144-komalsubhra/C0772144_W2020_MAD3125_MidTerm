@@ -49,6 +49,12 @@ public class TaxDetailsActivity extends AppCompatActivity {
         txtAge.setText(String.valueOf(getAge()));
 
         CalculatorActivity calculator = new CalculatorActivity(craCustomer.getGrossIncome(), craCustomer.getRrspContributed());
+        double totalTaxableIncome = 0.0d;
+        double maxRRSP =  0.18d * craCustomer.getGrossIncome();
+        double EI = calculator.calculateEI(craCustomer.getGrossIncome());
+        double CPP = calculator.calculateCPP(craCustomer.getGrossIncome());
+        double RRSP = craCustomer.getRrspContributed();
 
       
+
 }
