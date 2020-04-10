@@ -10,7 +10,6 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.c0772144_w2020_mad3125_midterm.R;
-import com.example.c0772144_w2020_mad3125_midterm.Util.BackgroundTask;
 
 
 public class SplashScreenActivity extends AppCompatActivity {
@@ -33,7 +32,33 @@ public class SplashScreenActivity extends AppCompatActivity {
     }
 
 
+    private class BackgroundTask extends AsyncTask {
+        Intent intent;
 
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            intent = new Intent(SplashScreenActivity.this,EntryFormActivity.class);
+        }
 
+        @Override
+        protected Object doInBackground(Object[] params) {
+            try {
+                Thread.sleep(SPLASH_TIME);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
-}
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Object o) {
+            super.onPostExecute(o);
+
+            startActivity(intent);
+            finish();
+        }
+    }
+    }
+
