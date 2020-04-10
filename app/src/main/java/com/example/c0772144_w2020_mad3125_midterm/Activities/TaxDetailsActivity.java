@@ -43,4 +43,9 @@ public class TaxDetailsActivity extends AppCompatActivity {
         String lastName = craCustomer.getLastName().toUpperCase();
         String fullName = lastName + ", " +formattedFirstName;
 
+        txtName.setText(fullName);
+        txtSin.setText(craCustomer.getSIN());
+        txtGrossIncome.setText("$ " + MethodsActivity.getInstance().doubleFormatter(craCustomer.getGrossIncome()));
+        txtAge.setText(String.valueOf(getAge()));
+
 }
