@@ -1,6 +1,5 @@
 package com.example.c0772144_w2020_mad3125_midterm.Activities;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -10,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.c0772144_w2020_mad3125_midterm.Model.CRACustomer;
 import com.example.c0772144_w2020_mad3125_midterm.R;
-import com.example.c0772144_w2020_mad3125_midterm.Util.MethodsActivity;
+import com.example.c0772144_w2020_mad3125_midterm.Util.ExtensionActivity;
 
 import org.joda.time.LocalDate;
 
@@ -62,7 +61,7 @@ public class TaxDetailsActivity extends AppCompatActivity {
 
         txtName.setText(fullName);
         txtSin.setText(craCustomer.getSIN());
-        txtGrossIncome.setText("$ " + MethodsActivity.getInstance().doubleFormatter(craCustomer.getGrossIncome()));
+        txtGrossIncome.setText("$ " + ExtensionActivity.getInstance().doubleFormatter(craCustomer.getGrossIncome()));
         txtAge.setText(String.valueOf(getAge()));
 
         CalculatorActivity calculator = new CalculatorActivity(craCustomer.getGrossIncome(), craCustomer.getRrspContributed());
@@ -85,25 +84,25 @@ public class TaxDetailsActivity extends AppCompatActivity {
         double federalTax = calculator.calculateTaxOfProvince((float) totalTaxableIncome) * totalTaxableIncome;
         double totalTax = provincialTax + federalTax;
 
-        txtProvincialTax.setText("$ " + MethodsActivity.getInstance().doubleFormatter(provincialTax));
-        txtFederalTax.setText("$ " + MethodsActivity.getInstance().doubleFormatter(federalTax));
-        txtCPP.setText("$ " + MethodsActivity.getInstance().doubleFormatter(CPP));
-        txtEI.setText("$ " + MethodsActivity.getInstance().doubleFormatter(EI));
-        txtTotalTax.setText("$ " +MethodsActivity.getInstance().doubleFormatter(totalTax));
-        txtRRSP.setText("$ " +MethodsActivity.getInstance().doubleFormatter(craCustomer.getRrspContributed()));
-        txtTotalIncome.setText("$ " +MethodsActivity.getInstance().doubleFormatter(totalTaxableIncome));
+        txtProvincialTax.setText("$ " + ExtensionActivity.getInstance().doubleFormatter(provincialTax));
+        txtFederalTax.setText("$ " + ExtensionActivity.getInstance().doubleFormatter(federalTax));
+        txtCPP.setText("$ " + ExtensionActivity.getInstance().doubleFormatter(CPP));
+        txtEI.setText("$ " + ExtensionActivity.getInstance().doubleFormatter(EI));
+        txtTotalTax.setText("$ " + ExtensionActivity.getInstance().doubleFormatter(totalTax));
+        txtRRSP.setText("$ " + ExtensionActivity.getInstance().doubleFormatter(craCustomer.getRrspContributed()));
+        txtTotalIncome.setText("$ " + ExtensionActivity.getInstance().doubleFormatter(totalTaxableIncome));
 
         if(craCustomer.getRrspContributed() > maxRRSP)
         {
             Double finalCarry = craCustomer.getRrspContributed() - maxRRSP;
-            txtCarry.setText("$ " +"-"+MethodsActivity.getInstance().doubleFormatter(finalCarry));
+            txtCarry.setText("$ " +"-"+ ExtensionActivity.getInstance().doubleFormatter(finalCarry));
             txtCarry.setTextColor(getResources().getColor(R.color.red));
             txtCarry.setTypeface(null, Typeface.BOLD);
         }
         else
         {
             Double finalCarry =  maxRRSP - craCustomer.getRrspContributed();
-            txtCarry.setText("$ " +MethodsActivity.getInstance().doubleFormatter(finalCarry));
+            txtCarry.setText("$ " + ExtensionActivity.getInstance().doubleFormatter(finalCarry));
         }
     }
 
@@ -111,7 +110,7 @@ public class TaxDetailsActivity extends AppCompatActivity {
     {
         int age = 0;
         String bDate = txtBirthDate.getText().toString();
-        age = LocalDate.now().getYear() - MethodsActivity.getInstance().stringToDate(bDate).getYear();
+        age = LocalDate.now().getYear() - ExtensionActivity.getInstance().stringToDate(bDate).getYear();
         return age;
     }
 
