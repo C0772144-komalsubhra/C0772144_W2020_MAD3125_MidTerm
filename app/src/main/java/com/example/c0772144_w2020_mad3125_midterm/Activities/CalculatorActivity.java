@@ -27,10 +27,10 @@ public class CalculatorActivity {
 
     public double calculateTaxOfProvince(double TaxableIncome)
     {
-        if(TaxableIncome <= 10582.0d) {
+        if(TaxableIncome <= 10500.0d) {
             return 0.0d;
         }
-        else if(TaxableIncome >= 10582.0d && TaxableIncome <=43906.0d)
+        else if(TaxableIncome >= 10570.0d && TaxableIncome <=42000.0d)
         {
             return 0.0505d;
         }
