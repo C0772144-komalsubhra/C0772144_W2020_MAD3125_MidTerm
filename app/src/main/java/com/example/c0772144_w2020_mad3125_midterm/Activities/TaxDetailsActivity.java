@@ -100,7 +100,23 @@ public class TaxDetailsActivity extends AppCompatActivity {
 
     public void init()
     {
-      
+        txtName = findViewById(R.id.name);
+        txtSin = findViewById(R.id.sinNumber);
+
+        txtBirthDate = findViewById(R.id.birthDate);
+        txtGender = findViewById(R.id.gender);
+        txtAge = findViewById(R.id.age);
+
+        txtGrossIncome = findViewById(R.id.grossIncome);
+        txtFederalTax = findViewById(R.id.federalTax);
+        txtProvincialTax = findViewById(R.id.provincialTax);
+        txtCPP = findViewById(R.id.cPP);
+        txtCarry = findViewById(R.id.carryForward);
+        txtRRSP = findViewById(R.id.rRSP);
+        txtEI = findViewById(R.id.eI);
+
+        txtTotalIncome = findViewById(R.id.totalTaxIncome);
+        txtTotalTax = findViewById(R.id.txtPaid);
     }
 
 
