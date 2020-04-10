@@ -55,6 +55,41 @@ public class TaxDetailsActivity extends AppCompatActivity {
         double CPP = calculator.calculateCPP(craCustomer.getGrossIncome());
         double RRSP = craCustomer.getRrspContributed();
 
-      
+        if(craCustomer.getRrspContributed() > maxRRSP)
+        {
+            totalTaxableIncome = craCustomer.getGrossIncome() - (CPP + EI + maxRRSP);
+        }
+        else
+        {
+            totalTaxableIncome = craCustomer.getGrossIncome() - (CPP + EI + RRSP);
+        }
+
+        double provincialTax = calculator.calculateTaxOfFederal(totalTaxableIncome) * totalTaxableIncome;
+        double federalTax = calculator.calculateTaxOfProvince((float) totalTaxableIncome) * totalTaxableIncome;
+        double totalTax = provincialTax + federalTax;
+
+        txtProvincialTax.setText("$ " + MethodsActivity.getInstance().doubleFormatter(provincialTax));
+        txtFederalTax.setText("$ " + MethodsActivity.getInstance().doubleFormatter(federalTax));
+        txtCPP.setText("$ " + MethodsActivity.getInstance().doubleFormatter(CPP));
+        txtEI.setText("$ " + MethodsActivity.getInstance().doubleFormatter(EI));
+        txtTotalTax.setText("$ " +MethodsActivity.getInstance().doubleFormatter(totalTax));
+        txtRRSP.setText("$ " +MethodsActivity.getInstance().doubleFormatter(craCustomer.getRrspContributed()));
+        txtTotalIncome.setText("$ " +MethodsActivity.getInstance().doubleFormatter(totalTaxableIncome));
+
+        if(craCustomer.getRrspContributed() > maxRRSP)
+        {
+            Double finalCarry = craCustomer.getRrspContributed() - maxRRSP;
+            txtCarry.setText("$ " +"-"+MethodsActivity.getInstance().doubleFormatter(finalCarry));
+            txtCarry.setTextColor(getResources().getColor(R.color.red));
+            txtCarry.setTypeface(null, Typeface.BOLD);
+        }
+        else
+        {
+            Double finalCarry =  maxRRSP - craCustomer.getRrspContributed();
+            txtCarry.setText("$ " +MethodsActivity.getInstance().doubleFormatter(finalCarry));
+        }
+    }
+
+    
 
 }
