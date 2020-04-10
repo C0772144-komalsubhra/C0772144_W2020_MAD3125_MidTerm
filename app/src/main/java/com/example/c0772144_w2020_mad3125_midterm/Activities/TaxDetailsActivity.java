@@ -48,4 +48,7 @@ public class TaxDetailsActivity extends AppCompatActivity {
         txtGrossIncome.setText("$ " + MethodsActivity.getInstance().doubleFormatter(craCustomer.getGrossIncome()));
         txtAge.setText(String.valueOf(getAge()));
 
+        CalculatorActivity calculator = new CalculatorActivity(craCustomer.getGrossIncome(), craCustomer.getRrspContributed());
+
+      
 }
